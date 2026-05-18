@@ -284,7 +284,7 @@ const createCompactLangNode = ({
   return `
     <g class="stagger" style="animation-delay: ${staggerDelay}ms">
       <circle cx="5" cy="6" r="5" fill="${color}" />
-      <text data-testid="lang-name" x="15" y="10" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 13px; font-weight: 400; fill: ${colors.textColor};">
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
         ${lang.name} ${hideProgress ? "" : displayValue}
       </text>
     </g>
