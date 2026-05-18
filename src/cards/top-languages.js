@@ -283,8 +283,9 @@ const createCompactLangNode = ({
 
   return `
     <g class="stagger" style="animation-delay: ${staggerDelay}ms">
-      <circle cx="5" cy="6" r="6.5" fill="${color}" />
-      <text data-testid="lang-name" x="17" y="11.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 14px; font-weight: 400; fill: ${langCardLocales?.[lang.name] ? colors.textColor : color};">
+      <circle cx="5" cy="6" r="5.5" fill="${color}" />
+      
+      <text data-testid="lang-name" x="16" y="10.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 12px; font-weight: 400; fill: ${colors.textColor};">
         ${lang.name} ${hideProgress ? "" : displayValue}
       </text>
     </g>
