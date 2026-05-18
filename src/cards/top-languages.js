@@ -285,7 +285,7 @@ const createCompactLangNode = ({
     <g class="stagger" style="animation-delay: ${staggerDelay}ms">
       <circle cx="5" cy="6" r="5.5" fill="${color}" />
       
-      <text data-testid="lang-name" x="16" y="10.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 12px; font-weight: 400; fill: ${colors.textColor};">
+      <text data-testid="lang-name" x="17" y="11.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 13.5px; font-weight: 400; fill: ${colors.textColor};">
         ${lang.name} ${hideProgress ? "" : displayValue}
       </text>
     </g>
@@ -330,7 +330,7 @@ const createLanguageTextNode = ({
 
   const percent = ((longestLang.size / totalSize) * 100).toFixed(2);
   const minGap = 165;
-  const maxGap = 20 + measureText(`${longestLang.name} ${percent}%`, 14);
+  const maxGap = 20 + measureText(`${longestLang.name} ${percent}%`, 13.5);
   return flexLayout({
     items: layouts,
     gap: maxGap < minGap ? minGap : maxGap,
