@@ -784,6 +784,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     hide_title = false,
     hide_border = false,
     card_width,
+    card_height,
     title_color,
     text_color,
     bg_color,
@@ -874,6 +875,10 @@ const renderTopLanguages = (topLangs, options = {}) => {
       totalLanguageSize,
       stats_format,
     );
+  }
+
+  if (card_height && !isNaN(card_height)) {
+    height = card_height;
   }
 
   const card = new Card({
