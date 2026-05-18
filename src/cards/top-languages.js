@@ -283,9 +283,9 @@ const createCompactLangNode = ({
 
   return `
     <g class="stagger" style="animation-delay: ${staggerDelay}ms">
-      <circle cx="5" cy="6" r="5.5" fill="${color}" />
+      <circle cx="5" cy="7.5" r="5.5" fill="${color}" />
       
-      <text data-testid="lang-name" x="17" y="11.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 13.5px; font-weight: 400; fill: ${colors.textColor};">
+      <text data-testid="lang-name" x="18" y="12.5" style="font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 13.5px; font-weight: 400; fill: ${colors.textColor};">
         ${lang.name} ${hideProgress ? "" : displayValue}
       </text>
     </g>
@@ -890,6 +890,9 @@ const renderTopLanguages = (topLangs, options = {}) => {
     border_radius,
     colors,
   });
+
+  card.paddingX = 25;
+  card.paddingY = 35;
 
   if (disable_animations) {
     card.disableAnimations();
