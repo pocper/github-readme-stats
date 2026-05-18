@@ -819,7 +819,10 @@ const renderTopLanguages = (topLangs, options = {}) => {
         ? MIN_CARD_WIDTH
         : card_width
     : DEFAULT_CARD_WIDTH;
-  let height = calculateNormalLayoutHeight(langs.length);
+  let height = COMPACT_LAYOUT_BASE_HEIGHT + Math.round(totalLangs / 2) * 25;
+  if (card_height && !isNaN(card_height)) {
+    height = parseInt(card_height, 10);
+  }
 
   // returns theme based colors with proper overrides and defaults
   const colors = getCardColors({
@@ -930,7 +933,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     }
     .bold { font-weight: 700 }
     .lang-name {
-      font: 400 14px "Segoe UI", Ubuntu, Sans-Serif;
+      font: 400 13px "Segoe UI", Ubuntu, Sans-Serif;
       fill: ${colors.textColor};
     }
     .stagger {
