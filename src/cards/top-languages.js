@@ -328,8 +328,8 @@ const createLanguageTextNode = ({
   });
 
   const percent = ((longestLang.size / totalSize) * 100).toFixed(2);
-  const minGap = 150;
-  const maxGap = 20 + measureText(`${longestLang.name} ${percent}%`, 11);
+  const minGap = 165;
+  const maxGap = 20 + measureText(`${longestLang.name} ${percent}%`, 14);
   return flexLayout({
     items: layouts,
     gap: maxGap < minGap ? minGap : maxGap,
@@ -923,7 +923,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     }
     .bold { font-weight: 700 }
     .lang-name {
-      font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
+      font: 400 14px "Segoe UI", Ubuntu, Sans-Serif;
       fill: ${colors.textColor};
     }
     .stagger {
