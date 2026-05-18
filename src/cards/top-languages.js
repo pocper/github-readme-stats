@@ -819,7 +819,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
         ? MIN_CARD_WIDTH
         : card_width
     : DEFAULT_CARD_WIDTH;
-  let height = COMPACT_LAYOUT_BASE_HEIGHT + Math.round(totalLangs / 2) * 25;
+  let height = COMPACT_LAYOUT_BASE_HEIGHT + Math.round(langs.length / 2) * 25;
   if (card_height && !isNaN(card_height)) {
     height = parseInt(card_height, 10);
   }
@@ -881,7 +881,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   }
 
   if (card_height && !isNaN(card_height)) {
-    height = card_height;
+    height = parseInt(card_height, 10);
   }
 
   const card = new Card({
